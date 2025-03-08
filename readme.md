@@ -8,6 +8,8 @@ Durante **14 semanas (Full-Time)** o **21 semanas (Part-Time)**, desarrollaré u
 - 🖥️ **HTML** – La estructura de la web  
 - 🎨 **CSS** – Diseño y estilos  
 - ⚡ **JavaScript (React)** – Interactividad y dinamismo  
+- ☕ **Java** – Fundamentos y programación backend  
+- 💻 **Terminal** – Comandos y gestión de sistemas  
 
 Además, trabajaré con **metodologías Agile**, simulando un entorno profesional con trabajo en equipo y objetivos semanales.  
 
@@ -19,3 +21,5 @@ Aquí encontrarás:
 ✅ Apuntes y resúmenes 📝  
 ✅ Ejercicios y prácticas 💡  
 ✅ Avances en mi proyecto final 🚀  
+
+¡Sígueme en este viaje y acompáñame en mi evolución como desarrollador web! 😊
