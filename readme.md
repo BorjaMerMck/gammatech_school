@@ -27,10 +27,9 @@ Aquí encontrarás:
 - [x] 102 Terminal ✅  
 
 📌 **Documentación de CSS**  
-- [ ] 305 CSS  
-- [ ] 307 CSS  
+- [x] 305 CSS  
 
 📌 **Documentación de Java**  
-- [ ] 200 Java Documentación  
+- [x] 200 Java Documentación  
 
 ¡Sígueme en este viaje y acompáñame en mi evolución como desarrollador web! 😊

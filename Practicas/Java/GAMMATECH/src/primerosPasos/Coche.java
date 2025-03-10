@@ -13,7 +13,8 @@ public class Coche {
 	}
 	
 	
-	public void imprimirInfo(){
+	public void imprimirInfo()
+	{
 		
 		System.out.println("Marca: "+marca + "\nModelo: "+ modelo +"\nAño: "+ anio + "\n");
 	}
