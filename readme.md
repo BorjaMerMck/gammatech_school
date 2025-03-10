@@ -8,7 +8,7 @@ Aquí encontrarás:
 
 <details>
   <summary>📌 Documentación de Terminal</summary>
-  - [x] 102 Terminal ✅
+  - [x] 102 Terminal 
 </details>
 
 <details>
