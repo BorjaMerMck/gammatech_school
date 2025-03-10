@@ -1,4 +1,3 @@
-
 ## 📂 Contenido del repositorio  
 Aquí encontrarás:  
 ✅ Apuntes y resúmenes 📝  
@@ -6,13 +5,20 @@ Aquí encontrarás:
 ✅ Avances en mi proyecto final 🚀  
 
 ## 📝 To-Do del Curso  
-📌 **Documentación de Terminal**  
-- [x] 102 Terminal ✅  
 
-📌 **Documentación de CSS**  
-- [x] 305 CSS  
+<details>
+  <summary>📌 Documentación de Terminal</summary>
+  - [x] 102 Terminal ✅
+</details>
 
-📌 **Documentación de Java**  
-- [x] 200 Java Documentación  
+<details>
+  <summary>📌 Documentación de CSS</summary>
+  - [x] 305 CSS
+</details>
+
+<details>
+  <summary>📌 Documentación de Java</summary>
+  - [x] 200 Java Documentación
+</details>
 
 ¡Sígueme en este viaje y acompáñame en mi evolución como desarrollador web! 😊
