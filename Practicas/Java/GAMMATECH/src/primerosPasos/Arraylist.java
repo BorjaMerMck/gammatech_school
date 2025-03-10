@@ -16,7 +16,8 @@ public class Arraylist {
 
 
 	        System.out.println("\nElementos de la lista:");
-	        for (String elemento : lista) {
+	        for (String elemento : lista)
+	        {
 	            System.out.println(elemento);
 	        }
 	    }
