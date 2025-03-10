@@ -21,4 +21,3 @@ Aquí encontrarás:
   - [x] 200 Java Documentación
 </details>
 
-¡Sígueme en este viaje y acompáñame en mi evolución como desarrollador web! 😊
