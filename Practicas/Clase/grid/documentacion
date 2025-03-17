@@ -1,0 +1,5 @@
+
+forma de abreviada 
+grid-column: 4 / 6
+grid-row: 3/6 
+grid-area: 1/2/4/6
