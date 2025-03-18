@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.boton-magico {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.boton-magico:hover {
+    background-color: #e74c3c;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.boton-magico:active {
+    transform: scale(0.9) rotate(-5deg);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
