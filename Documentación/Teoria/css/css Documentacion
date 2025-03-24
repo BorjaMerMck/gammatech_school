@@ -1,0 +1,55 @@
+1. Valores básicos:
+
+block → Ocupa todo el ancho disponible, inicia en una nueva línea (ej.: <div>, <p>).
+inline → Ocupa solo el ancho necesario, sin salto de línea (ej.: <span>, <a>).
+inline-block → Como inline, pero permite aplicar ancho, alto, márgenes y padding.
+none → Oculta el elemento (no ocupa espacio en el diseño).
+
+2. Flexbox y Grid:
+
+flex → Activa un contenedor flexible (para diseño con Flexbox).
+inline-flex → Como flex, pero se comporta como un elemento en línea.
+grid → Activa un contenedor de cuadrícula (para diseño con Grid).
+inline-grid → Como grid, pero se comporta como un elemento en línea.
+
+3. Valores relacionados con tablas:
+
+table → Se comporta como una tabla HTML (<table>).
+inline-table → Como table, pero en línea.
+table-row → Como una fila de tabla (<tr>).
+table-cell → Como una celda de tabla (<td>).
+table-column → Representa una columna de tabla.
+table-column-group → Agrupa columnas de tabla.
+table-header-group → Agrupa las celdas de encabezado (<thead>).
+table-footer-group → Agrupa las celdas de pie de tabla (<tfoot>).
+table-row-group → Agrupa las filas (<tbody>).
+
+4. Otros valores especiales:
+
+contents → Hace que el contenedor desaparezca visualmente, pero mantiene sus hijos en el flujo normal.
+list-item → Se comporta como un elemento de lista (<li>).
+run-in (obsoleto) → Se comporta como inline o block según el contexto.
+inherit → Hereda el valor del elemento padre.
+initial → Usa el valor por defecto (inline o block, según el elemento).
+unset → Revierte a inherit o initial, según corresponda.
+
+
+Valor	Descripción
+static	Es el valor por defecto. El elemento se posiciona según el flujo normal del documento.
+relative	Permite mover el elemento desde su posición original usando top, left, right o bottom, sin afectar a otros elementos.
+absolute	Posiciona el elemento con respecto a su ancestro con position: relative más cercano, o al body si no lo tiene. Se saca del flujo normal del documento.
+fixed	Similar a absolute, pero el elemento se mantiene fijo en la pantalla incluso al hacer scroll. Se posiciona respecto al viewport.
+sticky	El elemento actúa como relative hasta que se alcanza un cierto punto en el scroll, donde se vuelve fixed.
+
+
+preguntas de css como poder centrar un 
+
+¿Cómo centro un div en la pantalla?
+
+
+.div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
