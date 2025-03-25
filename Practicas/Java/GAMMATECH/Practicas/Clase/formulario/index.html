@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Completo</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <!-- Radiobuttons para tipo de conexión -->
+        <fieldset>
+            <legend>Opciones</legend>
+            <label>
+                <input type="radio" name="conexion" value="conexionwifi"> Wifi
+            </label>
+            <label>
+                <input type="radio" name="conexion" value="conexioncable"> Cable
+            </label>
+            <label>
+                <input type="radio" name="conexion" value="conexionfibra"> Fibra
+            </label>
+   
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora"><br><br>
+
+        <!-- Control para elegir ficheros -->
+        <label for="fichero">Elegir fichero:</label>
+        <input type="file" id="fichero" name="fichero"><br><br>
+
+        <!-- Lista desplegable para preferencia -->
+        <label for="preferencia">Preferencia:</label>
+        <select id="preferencia" name="preferencia">
+            <option value="ciencias">Ciencias</option>
+            <option value="letras">Letras</option>
+        </select><br><br>
+
+        <label for="comentarios">Comentarios:</label><br>
+        <textarea id="comentarios" name="comentarios" placeholder="Escriba aqui, por favor" rows="8" cols="45"></textarea><br><br>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha"><br><br>
+
+        
+            <label>
+                <input type="checkbox" name="conector" value="conectorusb"> USB
+            </label><br>
+            <label>
+                <input type="checkbox" name="conector" value="conectorparalelo"> Paralelo
+            </label><br>
+            <label>
+                <input type="checkbox" name="conector" value="conectorps2"> PS2
+            </label><br>
+  
+
+        <label for="instituto">Instituto:</label>
+        <input type="text" id="instituto" name="instituto">
+
+        <label for="estudios">Estudios elegidos:</label>
+        <input type="text" id="estudios" name="estudios">
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="color">Elige un color:</label>
+        <input type="color" id="color" name="color"><br><br>
+    </fieldset>
+        <fieldset>
+            <legend>Por favor, complete estas opciones</legend>
+            <label for="color">Elige un color:</label>
+            <input type="color" id="color" name="color"><br><br>
+            <label>
+                <input type="radio" name="procesador" value="procesadorintel"> Intel
+            </label><br>
+            <label>
+                <input type="radio" name="procesador" value="procesadoramd"> AMD
+            </label> <br>
+            <label for="hora">Elija una hora:</label>
+            <input type="time" id="hora" name="hora"><br><br>
+            <label for="fichero">Elegir fichero:</label>
+            <input type="file" id="fichero" name="fichero"><br><br>
+
+            <label for="idioma">Idiomas:</label>
+            <select id="idioma" name="idioma" multiple>
+                <option value="ingles">Inglés</option>
+                <option value="aleman">Alemán</option>
+                <option value="frances">Francés</option>
+            </select><br><br>
+            <label for="instituto">Nombre:</label>
+        <input type="text" id="Nombre" name="Nombre">
+
+        <label for="estudios">Apellidos</label>
+        <input type="text" id="Apellidos" name="Apellidos">
+
+        <label for="nombre">email:</label>
+        <input type="text" id="nombre" name="nombre">
+
+    
+        <label for="email">telefono:</label>
+        <input type="email" id="telefono" name="telefono"><br>
+
+        <label>
+            <input type="checkbox" name="provincias" value="provinciaalbacete"> Albacete
+        </label><br>
+        <label>
+            <input type="checkbox" name="provincias" value="provinciaciudad_real"> Ciudad Real
+        </label><br>
+        <label>
+            <input type="checkbox" name="provincias" value="provinciacuenca"> Cuenca
+        </label><br>
+        <label>
+            <input type="checkbox" name="provincias" value="provinciaguadalajara"> Guadalajara
+        </label><br>
+        <label>
+            <input type="checkbox" name="provincias" value="provinciatoledo"> Toledo
+        </label><br>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha"><br><br>
+        <label for="otro_comentario">Otro comentario:</label><br>
+        <textarea id="otro_comentario" name="otro_comentario" rows="8" cols="49" placeholder="Utilice este cuadro para escribir"></textarea><br><br>
+
+        </fieldset>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+.contenedor {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    margin: 50px auto;
+    transition: background-color 1s, transform 0.5s 1s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto {
+    color: white;
+    font-size: 16px;
+    margin: 0;
+    transition: transform 1s, color 1s 1s;
+}
+
+.contenedor:hover {
+    background-color: #e74c3c;
+    transform: scale(1.2) rotate(45deg);
+}
+
+.contenedor:hover .texto {
+    transform: translateX(20px);
+    color: yellow;
+}
+
+.segundo-contenedor {
+    width: 100px;
+    height: 100px;
+    background-color: #2ecc71;
+    margin: 20px auto;
+    transition: transform 3s;
+}
+
+.contenedor:hover + .segundo-contenedor {
+    transform: rotate(360deg) translateX(300px);
+}

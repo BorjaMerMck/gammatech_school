@@ -1,0 +1,21 @@
+1️⃣ Crea una carpeta llamada "ejercicio_terminal".
+    mkdir ejercicio_terminal
+
+2️ Entra en la carpeta "ejercicio_terminal".
+    cd ejercicio_terminal
+
+3️⃣ Crea dos carpetas dentro: "web1" y "web2".
+    mkdir web1 web2 
+
+4️⃣ Entra en "web1" y crea los archivos "index.html" y "style.css".
+    cd web1; touch index.html style.css
+
+5️⃣ Entra en "web2" y crea el archivo "README.md".
+    cd ../web2; touch README.md 
+
+6️⃣ Vuelve a "web1" y borra el archivo "style.css".Abre en Visual Studio Code el archivo "index.html" (desde la terminal).
+    cd ../web1 rm style.css 
+    code index.html
+
+7️ Vuelve al escritorio y borra la carpeta "ejercicio_terminal".
+    cd ~/Destop/ rm -r ejercicio_terminal
