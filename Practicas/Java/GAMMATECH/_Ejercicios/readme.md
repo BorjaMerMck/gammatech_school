@@ -21,13 +21,12 @@
 
 <details>
   <summary>_03_MetodosYCondiciones</summary>
-
   - [x] [C_Metodos](#)  
-
+  - [x] [CA_MetodosYVariables](#)  
 </details>
 
 <details>
-  <summary>📌 Documentación de Java</summary>
+  <summary>100_PrimerosEjerciciosLogica</summary>
 
   - [x] [_02ADN](#)  
 

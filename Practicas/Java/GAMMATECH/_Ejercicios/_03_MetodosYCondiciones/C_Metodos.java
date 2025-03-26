@@ -15,16 +15,11 @@ public class C_Metodos {
 		System.out.println("Introduce el numero2 que sea entero y mayor que 0");
 		int numero2 = sc.nextInt();
 		
-		 checkNumberNegative( numero1, numero2);
-		
-			int resultadoSuma =	suma(numero1,numero2);
-		
+			checkNumberNegative( numero1, numero2);
+		 	int resultadoSuma =	suma(numero1,numero2);
 			int resultadoResta = resta(numero1,numero2);
-		
 			int resultadoDivision = division(numero1,numero2);
-		
 			int resultadoMultiplicacion = multiplicacion(numero1, numero2);
-		
 			int resultadoModulo = modulo(numero1,numero2);
 			
 			
