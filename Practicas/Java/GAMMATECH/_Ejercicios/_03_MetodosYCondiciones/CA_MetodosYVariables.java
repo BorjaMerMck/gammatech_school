@@ -27,7 +27,6 @@ public class CA_MetodosYVariables {
 	        boolean bool = true;
 	        System.out.println("Variables primarias correctamente declaradas.");
 
-	        // Llamadas a métodos
 	        saludar();
 	        saludar("Borja");
 	        imprimirNumero(15);
