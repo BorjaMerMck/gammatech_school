@@ -1,9 +1,13 @@
 package _03_MetodosYCondiciones;
 
+import java.util.Scanner;
+
 public class DA_CondicionesSwitch {
 	
 	public static void scanner() {
-		
+    	Scanner sc = new Scanner(System.in);
+    	
+
 	}
 	
     // 1. Indica numéricamente (del 1 al 7) el día de la semana
@@ -11,7 +15,6 @@ public class DA_CondicionesSwitch {
     // el día de la semana en palabras (Lunes, Martes, Miércoles...)
     public static void ejercicio1() {
 
-    	Scanner sc = new Scanner(System.in);
     	switch (numero) {
 		// Podemos tener de 1 a N "case", que serán cada uno de los valores
 		// que puede tomar la variable del "switch". 
