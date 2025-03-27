@@ -1,0 +1,46 @@
+.agenda {
+    background-color: rgba(150, 0, 0, 0.1);
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.agenda h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+table th {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+table td {
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+table tbody tr:hover {
+    background-color: rgba(20, 61, 16, 0.05);
+}
+
+

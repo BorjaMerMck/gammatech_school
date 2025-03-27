@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Conferencia de Robots 2025</title>
+    <link rel="stylesheet" href="/styles/registro/registro.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="/pages/contenido.html">Agenda</a></li>
+            </ul>
+        </nav>
+
+        <section class="header-image">
+            <h1>Conferencia de Robots 2025</h1>
+        </section>
+    </header>
+
+
+    <main>
+        <section class="formulario-registro">
+            <h2>Formulario de Registro</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Datos Personales</legend>
+                    <div class="form-group">
+                        <label for="nombre">Nombre y Apellido:</label>
+                        <input type="text" id="nombre" name="nombre" required minlength="2">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" name="password" required minlength="6">
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Información de Contacto</legend>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="direccion">Dirección:</label>
+                        <input type="text" id="direccion" name="direccion" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferencias del Evento</legend>
+                    <div class="form-group">
+                        <label for="pais">País:</label>
+                        <select id="pais" name="pais" required>
+                            <option value="">Selecciona un país</option>
+                            <option value="es">España</option>
+                            <option value="mx">México</option>
+                            <option value="ar">Argentina</option>
+                            <option value="co">Colombia</option>
+                            <option value="cl">Chile</option>
+                            <option value="pe">Perú</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Talleres:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="talleres" value="desarrollo-web"> Desarrollo Web</label>
+                            <label><input type="checkbox" name="talleres" value="inteligencia-artificial"> Inteligencia Artificial</label>
+                            <label><input type="checkbox" name="talleres" value="diseno"> Diseño</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Sesión Principal:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="sesion" value="matutina" required> Matutina</label>
+                            <label><input type="radio" name="sesion" value="vespertina"> Vespertina</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Subir Archivo</legend>
+                    <div class="form-group">
+                        <label for="cv">Subir CV o Portafolio:</label>
+                        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Comentarios Adicionales</legend>
+                    <div class="form-group">
+                        <label for="comentarios">Comentarios:</label>
+                        <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Información de Pago</legend>
+                    <div class="form-group">
+                        <label for="tarjeta">Número de Tarjeta de Crédito:</label>
+                        <input type="text" id="tarjeta" name="tarjeta" pattern="\d{16}" required placeholder="1234123412341234">
+                    </div>
+                    <div class="form-group">
+                        <label for="expiracion">Fecha de Expiración:</label>
+                        <input type="month" id="expiracion" name="expiracion" required>
+                    </div>
+                </fieldset>
+
+                <div class="form-buttons">
+                    <button type="reset">Reiniciar</button>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+
+
+    <footer>
+        <p>&copy; 2025 Conferencia Tecnológica. Todos los derechos reservados.<strong><br>Borja Merchan Mckenna</strong></p>
+    </footer>
+</body>
+</html>
