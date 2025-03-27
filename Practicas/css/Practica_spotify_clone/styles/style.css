@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px 30px;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    height: 30px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 30px;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.contenido {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+}
+
+.contenido img {
+    width: 100%;
+    height: auto;
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text_1 {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.text_2,
+.text_3 {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.spotify-info {
+    text-align: center;
+    padding: 50px 0;
+    background-color: white;
+    border-top: 2px solid #f5f5f5;
+}
+
+.spotify-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #1DB954;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #1DB954;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 22px;
+    color: #888;
+}
+
+.spotify-funciones {
+    background-color: #1AB16A;
+    color: white;
+    padding: 40px 80px;
+    position: relative;
+}
+
+.funciones-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.funciones-content {
+    width: 55%;
+}
+
+.funciones-content h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #ffffff;
+    font-size: 28px;
+    display: inline-block;
+
+}
+
+
+
+.funciones-item {
+    margin-bottom: 30px;
+}
+
+.funciones-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.funciones-item p {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.funciones-image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.funciones-image  {
+    position: absolute;
+    top: 10px;
+    left: 700px;
+    height: 500px;
+ 
+}
+
+.funciones-logo {
+    position: absolute;
+    top: 190px;
+    left: 500px;
+}
+
+.funciones-logo img {
+    width: 120px;
+    height: 120px;
+}
