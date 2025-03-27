@@ -113,16 +113,16 @@ public class D_Condiciones {
 	}
 	
 	public static void ejercicio20(int nota) {
-	    if (nota >= 90) {
+	    if (nota >= 9) {
 	        System.out.println("Excelente");
-	    } else if (nota >= 80) {
+	    } else if (nota >= 8) {
 	        System.out.println("Muy bien");
-	    } else if (nota >= 70) {
+	    } else if (nota >= 6) {
 	        System.out.println("Bien");
-	    } else if (nota >= 60) {
+	    } else if (nota >= 5) {
 	        System.out.println("Aprobado");
 	    } else {
-	        System.out.println("Reprobado");
+	        System.out.println("Suspenso");
 	    }
 	}
 
@@ -156,7 +156,7 @@ public class D_Condiciones {
 		//ejercicio7(23,23);
 		//ejercicio8(12);
 		//ejercicio9('w');
-		//ejercicio10(2025);
+		ejercicio10(1900);
 		//ejercicio11(32);
 		//ejercicio12(18,false);
 		//ejercicio13(15);
@@ -167,10 +167,10 @@ public class D_Condiciones {
 	    //ejercicio17(-7);
 	    //ejercicio18(22, false);
 	    //ejercicio19(true, false);
-	    //ejercicio20(75);
+	    ejercicio20(7);
 	    //ejercicio21('A');
 	    //ejercicio22('g');
 	    //ejercicio23("clave123", "clave123");
-	    //ejercicio24(25);
+	    ejercicio24(60);
 	}
 }
