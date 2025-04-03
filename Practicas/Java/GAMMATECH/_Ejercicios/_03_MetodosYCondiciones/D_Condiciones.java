@@ -1,6 +1,10 @@
 package _03_MetodosYCondiciones;
 
+import java.util.Scanner;
+
 public class D_Condiciones {
+    public static Scanner sc = new Scanner(System.in);
+
 	public static void ejercicio1(int numero1) {
 		System.out.println((numero1 > 0) ? "es positivo" : "es negativo");					
 	}
@@ -146,31 +150,92 @@ public class D_Condiciones {
 	    }
 	}
 
+
+    public static void MostrarEjercicios() {
+        int opcion;
+        
+        do {
+            System.out.println("\n=== MENÚ DE EJERCICIOS ===");
+            System.out.println("1. ejercicio1(2)");
+            System.out.println("2. ejercicio2(-23)");
+            System.out.println("3. ejercicio3(0)");
+            System.out.println("4. ejercicio4(2)");
+            System.out.println("5. ejercicio5(5)");
+            System.out.println("6. ejercicio6(14)");
+            System.out.println("7. ejercicio7(23,23)");
+            System.out.println("8. ejercicio8(12)");
+            System.out.println("9. ejercicio9('w')");
+            System.out.println("10. ejercicio10(1900)");
+            System.out.println("11. ejercicio11(32)");
+            System.out.println("12. ejercicio12(18,false)");
+            System.out.println("13. ejercicio13(15)");
+            System.out.println("14. ejercicio14(1)");
+            System.out.println("15A. ejercicio15A(32,32,32)");
+            System.out.println("15B. ejercicio15B(23,321,23)");
+            System.out.println("16. ejercicio16(20)");
+            System.out.println("17. ejercicio17(-7)");
+            System.out.println("18. ejercicio18(22, false)");
+            System.out.println("19. ejercicio19(true, false)");
+            System.out.println("20. ejercicio20(7)");
+            System.out.println("21. ejercicio21('A')");
+            System.out.println("22. ejercicio22('g')");
+            System.out.println("23. ejercicio23(\"clave123\", \"clave123\")");
+            System.out.println("24. ejercicio24(60)");
+            System.out.println("0. Salir");
+            System.out.print("Seleccione un ejercicio (0-24): ");
+            
+            opcion = sc.nextInt();
+            
+            switch(opcion) {
+                case 1: ejercicio1(2); break;
+                case 2: ejerciocio2(-23); break;
+                case 3: ejercico3(0); break;
+                case 4: ejercicio4(2); break;
+                case 5: ejercicio5(5); break;
+                case 6: ejercicio6(14); break;
+                case 7: ejercicio7(23, 23); break;
+                case 8: ejercicio8(12); break;
+                case 9: ejercicio9('w'); break;
+                case 10: ejercicio10(1900); break;
+                case 11: ejercicio11(32); break;
+                case 12: ejercicio12(18, false); break;
+                case 13: ejercicio13(15); break;
+                case 14: ejercicio14(1); break;
+                case 15: 
+                    System.out.println("15A o 15B? (A/B)");
+                    sc.nextLine();
+                    String subOp = sc.nextLine();
+                    if(subOp.equalsIgnoreCase("A")) ejercicio15A(32, 32, 32);
+                    else if(subOp.equalsIgnoreCase("B")) ejercicio15B(23, 321, 23);
+                    else System.err.println("Opción no válida");
+                    break;
+                case 16: ejercicio16(20); break;
+                case 17: ejercicio17(-7); break;
+                case 18: ejercicio18(22, false); break;
+                case 19: ejercicio19(true, false); break;
+                case 20: ejercicio20(7); break;
+                case 21: ejercicio21('A'); break;
+                case 22: ejercicio22('g'); break;
+                case 23: ejercicio23("clave123", "clave123"); break;
+                case 24: ejercicio24(60); break;
+                case 0: System.out.println("Saliendo..."); break;
+                default: System.out.println("Opción no válida");
+            }
+            
+            if(opcion != 0) {
+                System.out.print("\nPresione Enter para continuar...");
+                sc.nextLine(); 
+                sc.nextLine(); 
+            }
+            
+        } while(opcion != 0);
+        sc.close();
+    }
+		
+	
 	public static void main(String[] args) {
-		//ejercicio1(2);			
-		//ejerciocio2(-23);
-		//ejercico3(0);
-		//ejercicio4(2);
-		//ejercicio5(5);
-		//ejercicio6(14);
-		//ejercicio7(23,23);
-		//ejercicio8(12);
-		//ejercicio9('w');
-		ejercicio10(1900);
-		//ejercicio11(32);
-		//ejercicio12(18,false);
-		//ejercicio13(15);
-		//ejercicio14(1);
-		//ejercicio15A(32,32,32);
-		//ejercicio15B(23,321,23);
-	    //ejercicio16(20);
-	    //ejercicio17(-7);
-	    //ejercicio18(22, false);
-	    //ejercicio19(true, false);
-	    ejercicio20(7);
-	    //ejercicio21('A');
-	    //ejercicio22('g');
-	    //ejercicio23("clave123", "clave123");
-	    ejercicio24(60);
+		
+		
+		MostrarEjercicios();
 	}
 }

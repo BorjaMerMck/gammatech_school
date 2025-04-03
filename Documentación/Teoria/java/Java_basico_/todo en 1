@@ -1,0 +1,1540 @@
+/*
+ * ===========================
+ * =   FUNDAMENTOS BASICOS   =
+ * ===========================
+ */
+
+// ======COMENTARIOS====== 
+// Esto es un comentario de una sola línea en Java.
+// Los comentarios en Java empiezan por "//"
+// Son explicaciones que ponemos en nuestro código para aclarar 
+// ciertas partes del mismo.
+// Son muy útiles para nosotros y para los futuros desarrolladores que lean
+// nuestro código.
+
+// Las líneas en Java no se recomiendan que pasen de 80 caracteres
+
+// ======COMENTARIOS MULTILINEA======
+
+/*
+ * Poniendo los comentarios con este formato podemos poner comentarios
+ * de varias líneas sin necesidad
+ * de estar poniendo todo el rato '//'
+ */
+// El formato sería "/* */" --> al hacerlo el cursor se queda en medio
+// al pulsar la tecla ENTER automáticamente podrás ir introduciendo
+// texto tantas lineas como desees hasta llegar a '*/' que indica el cierre.
+
+/*
+ * Java es un lenguaje de programación orientado a objetos, por lo que 
+ * tenemos que usar clases para poder arrancar nuestro programa.
+ * Las clases se escriben con notación PascalCase (o UpperCamelCase). Es muy importante
+ * seguir las convenciones de código en Java
+ *
+ * Nótese que las clases siempre tienen bloques asociados, los bloques de 
+ * una clase están delimitados por los simbolos "{ }"
+ *
+ * Las clases tienen que llamar igual que el nombre del fichero donde se
+ * encuentran
+ */
+
+public class _0000_JavaFundamentos {
+    /*
+     * Para que un programa funcione tenemos que crear la clase.
+     * Dentro de la clase pondremos el método "main".
+     * Es un método especial que siempre tiene que llamarse exactamente igual:
+     */
+
+    // public static void main(String[] args) {...}
+
+        /*
+         * ======TRABAJANDO CON ECLIPSE (de momento no)======
+         * Al crear la clase selecciona la casilla de "crear método main"
+         * 
+         * Si se te olvida no te preocues: escribe main y pulsa "ctrl + espacio"
+         */
+    public static void main(String[] args) { // ===INICIO METODO MAIN===
+        /*
+         * Un programa en Java se ejecuta dentro de las llaves { } del método "main".
+         * Los métodos siempre tienen el bloque asociado delimitado entre llaves { }.
+         * 
+         * En todos los lenguajes los programas se ejecutan de manera SECUENCIAL,
+         * van línea a línea ejecutando las sentencias.
+         * Una sentencia es un comando, orden o instrucción que se le da al programa.
+         * 
+         * En Java las sentencias acaban con punto y coma ";".
+         */
+
+        // Sentencia que le indica al prgrama que imprima por pantalla lo que tiene entre paréntesis:
+        System.out.println("Este literal se imprimirá por pantalla cuando lo ejecutemos");
+        System.out.println("Hola hola caracola");
+
+        /*
+         * Cada texto que hay dentro de System.out.println(); se imprime en una línea diferente.
+         * println(); --> contracción de print line (imprimir línea).
+         *      - Incluye un salto de línea después de imprimir lo que tenga como argumento (paréntesis).
+         */
+
+        System.out.print("Esto sería imprimir sin salto de linea: "); // esta línea NO tiene salto de línea
+        System.out.println(" observa cómo lo imprime seguido."); // esta línea sí tiene salto de línea
+        System.out.println("Ahora estoy en otra línea porque he usado println(); en el anterior.");
+
+        // Puedo imprimir una línea vacía para dejar una línea en blanco en la consola:
+        System.out.println();
+        System.out.println("Por dejar un println(); sin argumento se ha quedado la línea en blanco.");
+    }// Fin del método "main". Aquí acabaría nuestro programa de Java
+        
+        // Las sentencias van siempre dentro de métodos! Si ponéis sentencias fuera de los métodos
+        // no van a funcionar
+        // System.out.println("Ahora lo imprimimos seguido"); // Esto daría error!!
+    
+} // ===Fin de la clase _000_JavaFundamentos
+
+/*
+ * =========================
+ * =   MANTENER EL ORDEN   =
+ * =========================
+ * 
+ * Ser ordenados con el código es FUNDAMENTAL.
+ * Hay que respetar las tabulaciones, saltos de línea, etc.
+ *
+ * 
+ * ======ECLIPSE======
+ * Si el código no tiene errores te va a ayudar a mantener el orden.
+ * Simplemente hay que seleccionar el código que queremos ordenar:
+ *      ==> CON EL RATON
+ *          1. clic con botón derecho.
+ *          2. "source" y luego "format"
+ *      ==> CON EL TECLADO: ctrl + a
+ * 
+ * ================
+ * =   COMPILAR   =
+ * ================
+ * 
+ * Siempre antes de compilar nuestro código tenemos que guardar los cambios.
+ * MANERA FACIL: ctrl + s
+ * 
+ * Si realizamos cualquier cambio en nuestro código tenemos que guardar.
+ * Una vez guardados los cambios podemos volver a compilar.
+ * 
+ * ======RECORDATORIO======
+ * Navega desde la terminal hasta el lugar en el que tienes tu archivo.
+ *      cd .. --> subir de nivel
+ *      cd carpeta --> ir a la carpeta (dentro del nivel en el que estoy)
+ *      pwd --> consultar el directorio en el que me encuentro
+ * 
+ * Una vez hemos llegado al directorio en el que está el archivo a compilar:
+ *      javac archivo.java
+ *      java archivo
+ * 
+ * Si todo va bien y el código es correcto cuando compiles podrás ejecutar el programa.
+ * Si hay algún error (como haberse dejado el ";" a final de sentencia,
+ * o escribir mal el nombre de alguna variable...) no compilará y saldrá el error por
+ * por la terminal. 
+ * 
+ * Hay muchas maneras de cometer errores.
+ */
+
+/*
+ * =================
+ * =   LITERALES   =
+ * =================
+ * 
+ * Antes de ver las variables, los LITERALES.
+ * Literal es un valor constante que se escribe directamente en el código
+ * y que representa un tipo de dato concreto (texto, booleano, número...).
+ * 
+ * Se pueden asignar a VARIABLES, que es lo siguiente que vamos a ver.
+ * 
+ * ==========================
+ * =   TIPOS DE LITERALES   =
+ * ==========================
+ * 
+ *  - Literales de cadenas de texto (String) que se escriben entre comillas dobles "literal"
+ *  - Literales de caracter (char) que se escriben entre comillas simples 'a'
+ *  - Literales de números enteros (int)
+ *  - Literales de números enteros grandes (long) --> se escribe una L al final del número
+ *  - Literales de números decimales (double)
+ *  - Literales de números decimales cortos (float) --> se escribe una f al final del número
+ *  - Literales booleanos --> true o false
+ */
+public class _0010_Literales { // ===INICIO DE LA CLASE LITERALES===
+    //  Para que se puedan observar salidas por pantalla es necesario el método main
+    public static void main(String[] args) {
+        // System.out.println(); --> Salida por consola del argumento que se le dé
+
+        // ======LITERALES DE TEXTO======
+        // Literal cadena de texto
+        System.out.println("Soy un literal de cadena de texto."); // Recuerda: ";" al final de la sentencia.
+
+        // Literal de caracter, es un único caracter
+        System.out.println('a'); // 
+
+        // ======LITERALES NUMERICOS======
+        // Literal de número entero
+        // Los números enteros no tienen ni puntos ni comas
+        System.out.println(10);
+
+        // 2.000.000 --> Esto es lo que escribía a mano
+
+        // Si el número es por ejemplo 2 millones se puede usar _ para separar
+        // millares y facilitar la lectura. Los _ no se imprimirán
+        System.out.println(2_000_000);
+        System.out.println(2000000);
+
+        // Literal de número grande (el rango de int es: –2,147,483,648 a 2,147,483,647)
+        System.out.println(3456456456L); // 3_456_456_456L
+        // No es necesario que supere el rango permitido por int:
+        System.out.println(1000L);
+
+        // Literal de número decimal (double)
+        // La parte decimal de la parte entera se separa con un punto "."
+        System.out.println(52.6789);
+
+        // 52,6789 <-> 52'6789
+
+        // Literal de número decimal pequeño (float)
+        System.out.println(1199.99f); // 1_199.99f
+
+        // ======BOOBLEAN======
+        // Verdadero
+        System.out.println(true);
+        // Falso
+        System.out.println(false);
+
+    } // Llave que CIERRA metodo main
+} // Llave que CIERRA la clase _001_Literales
+_0010_Literales.java
+Displaying _0010_Literales.java.
+
+/*
+ * =================
+ * =   VARIABLES   =
+ * =================
+ * En Java, una variable es un espacio en la memoria que se utiliza para 
+ * almacenar un valor específico (generalmente un literal). 
+ * Las variables tienen un tipo, un nombre y un valor.
+ *  
+ * El nombre de una variable es un identificador único que se 
+ * utiliza para hacer referencia al valor almacenado en esa variable. 
+ * El tipo de una variable especifica qué tipo puede almacenarse en 
+ * ella y el valor es el dato que se guarda.
+ *
+ * Java es un lenguaje de tipado estático, lo que significa que el tipo de 
+ * una variable debe ser especificado al momento de declararla. Además,
+ * no se podrá cambiar el tipo de dato que puede contener esa variable.
+ * 
+ * ======DECLARACION DE UNA VARIABLE======
+ * [tipo] [nombre] = [valor];
+ * Se declara una variable en el momento que se crea.
+ * Una vez ha sido creada no se puede volver a crear otra vez,
+ * pero si utilizar, simplemente llamándolas por su nombre.
+ * 
+ * El nombre de las variables únicamente puede empezar por:
+ *      1. caracter alfabético
+ *      2. guión bajo '_'
+ *      3. símbolo del dólar '$'
+ * Se escribe el nombre en camelCase.
+ * 
+ * ==================
+ * =   CONSTANTES   =
+ * ==================
+ * Hay un tipo especial de variable que es una constante.
+ * A una constante no se le puede cambiar el valor.
+ * Tampoco se puede hacer una reasignación a lo largo del ciclo de vida
+ * de la variable.
+ * Como las variables pueden ser de cualquier tipo.
+ * Si son una constante de clase, más adelante sabréis qué significa,
+ * hay que indicar si son públicas, privadas, protegidas...
+ * 
+ * Si una constante se declara dentro del método main 
+ * únicamente necesita la palabra reservada final antes del tipo.
+ * Las constantes se escriben enteramente en mayúsculas separando
+ * las palabras con guiones bajos _
+ */
+public class _0020_Variables { // Llave de inicio de la clase
+    public static void main(String[] args) { // Llave de inicio del método main
+        // ======DECLARACION CON ASIGNACION======
+        // En el momento que se declara se le asigna el valor.
+        // Variable de un número del tipo int
+        int numero = 5;
+        System.out.println(numero);
+        System.out.println("Variable con valor: " + numero);
+
+        // ======DECLARACION======
+        // Número entero sin valor
+        int numeroVacio;
+        // System.out.println("Se ha declarado numeroVacio: " + numeroVacio); //--> numeroVacio no tiene valor
+        // Asignación de valor a la variable
+        numeroVacio = 7;
+        System.out.println("Ahora viene valor: " + numeroVacio);
+
+        /*
+         * ====================
+         * =   REASIGNACION   =
+         * ====================
+         * Cuando ya se ha declarado una variable se le puede reasignar otro valor
+         * siempre que cumpla la condición de ser del mismo tipo.
+         */
+
+        int numeroCambiante = 70;
+        System.out.println("He declarado una variable int cuyo valor es:");
+        System.out.println(numeroCambiante);
+        System.out.println("Le voy a hacer una reasignación con otro int:");
+        numeroCambiante = 1500; // 1500 también es int y va a sustituir el valor
+        System.out.println(numeroCambiante);
+
+        // Se pueden declarar variables de cualquiera de los tipos primitivos
+        // o clases, u objetos... (lo entenderéis más adelante).
+
+        long numeroGrande = 500L; // si es long se indica con la L al final.
+        double numeroDecimal = 5.25;
+        boolean variableBooleana = true;
+
+        // tipos menos usados
+        // byte --> números muy pequeños -128 a 127
+        byte numeroByte = 1;
+        // short --> -32768 a 32767
+        short numeroShort = 31_500;
+        //float --> decimal de menos precisión
+        float numeroFloat = 5.25f; // si es float se indica con la f al final.
+        
+        // Tipo char recuerda que va entre comillas simples y es un único caracter
+        char unaLetra = 'b';
+
+        // Las cadenas de texto son String, va en mayúscula
+        String cadenaDeTexto = "Una cadena de texto siempre con comillas dobles \"\"";
+
+        System.out.println("Número grande no muestra la L:");
+        System.out.println(numeroGrande);
+        System.out.println("Los números no muestran _ que se usa para facilitar la lectura:");
+        System.out.println(numeroShort);
+        System.out.println("Los decimales float no muestran la f:");
+        System.out.println(numeroFloat);
+        System.out.println("Una variable vive dentro de todo el bloque entre las mismas {}");
+        System.out.println(numero);
+
+        /*
+         * ==============
+         * =   STRING   =
+         * ==============
+         * Las variables String su tipo empieza en mayúscula porque String es una clase.
+         * Al ser una clase este tipo de variables tendrán algunos métodos que podrán usarse
+         * los métodos realizarán una determinada tarea sobre la variable que se aplique.
+         * 
+         * ======OPERACIONES CON CADENAS======
+         * Se pueden sumar dos cadenas, generando una nueva.
+         * Se pueden comparar dos cadenas para validar si son iguales
+         */
+
+         /*
+          * "tortilla"
+          "patata"
+
+          "tortilla" + "patata" = "tortillapatata"
+          */
+        
+        // ======CONCATENACION======
+        String adjetivo = "fácil";
+        String sufijo = "mente";
+        String adverbio = adjetivo + sufijo; // "fácil" + "mente"
+        System.out.println("Tengo un adjetivo: " + adjetivo);
+        System.out.println("Tengo un sufijo: " + sufijo);
+        System.out.println("Al juntarlos sale este adverbio: " + adverbio);
+
+        // ======COMPARACION======
+        String nombre = "Alex";
+        String apellido = "Bometón";
+        // Cuando haga la comparación me devolverá un boolean
+        // Si lo almaceno tengo que asignar ese tipo a la variable
+        boolean comparacion = nombre.equals(apellido); // false
+        System.out.println("Voy a comparar si mi nombre (" 
+                           + nombre + ") y mi apellido (" 
+                           + apellido + ") son iguales");
+        System.out.println("La respuesta es: " + comparacion);
+
+        // Con char, al ser tipo primitivo no se utiliza ningún método
+        char letraA = 'a';
+        char letraB = 'b';
+        // Una comparativa será verdadera o falsa
+        boolean aIgualB = letraA == letraB; // false
+        System.out.println("¿Son 'a' y 'b' la misma letra?: " + aIgualB);
+        
+        // Declaro otra variable con otra letra
+        char letra3 = 'a';
+        boolean aIgual3 = letraA == letra3; // true
+        System.out.println("¿Son la variable letraA y la variable letra3 iguales?: " + aIgual3);
+
+        /*
+         * =================
+         * =   CONSTANTE   =
+         * =================
+         * final [tipo] [NOMBRE] = [valor];
+         */
+
+        final double NUMERO_PI = 3.1416;
+        // no se puede cambiar ese valor
+        // NUMERO_PI = 2.35; // error
+
+    } // Llave de cierre de main
+} // Llave de cierre de la clase
+
+public class _0021_VariablesCasteo {
+	public static void main(String[] args) {
+		long numeroLargo = 1_000L;
+		// podemos igualar siempre variables del mismo tipo
+		// sin problema
+		long numeroLargo2 = numeroLargo;
+		// Java no puede saber cuando ejecuta el programa el 
+		// valor de la variable. Por lo que no va a dejar
+		// igualar un entero a un long
+		int numeroEntero = 0; // Es importante inicializar las variables SIEMPRE
+		// int numeroEntero1 = numeroLargo; // error
+		// Si el tipo de dato que queremos guardar es MENOR
+		// que el tipo de dato de la variable, entonces si que 
+		// podemos.
+		numeroLargo = numeroEntero;
+		byte numeroByte = 100;
+		numeroEntero = numeroByte;
+		// A la inversa, NO podemos
+		// numeroByte = numeroEntero; // error
+
+		/*
+		 * ==============
+		 * =   CASTEO   =
+		 * ==============
+		 * Para convertir de un tipo de dato a otro hay que utilizar el casteo.
+		 * Se utiliza para introducir un tipo de dato MÁS grande
+		 * en una variable de un tipo más PEQUEÑO.
+		 * 
+		 * También será útil cuando tenemos que dividir números enterios
+		 * cuyo resultado sabemos que es decimal.
+		 * Haciendo el cast de uno de los números a decimal obtendremos
+		 * un resultado decimal.
+		 */
+		
+		numeroLargo = 10_000L;
+		// Casteamos el numero largo. Para castear se pone el tipo de dato
+		// al que queremos cambiarlo entre parentesis justo antes del 
+		// tipo tipo de dato que queremos 'castear'
+		// numeroEntero = numeroLargo; // no puedo poner una variable LONG como valor de una INT
+		numeroEntero = (int) numeroLargo; // Casting
+		System.out.println(numeroEntero);
+		
+		// Tipos de datos ordenados de mayor a menor de números enteros
+		// long > int > char = short > byte 
+		// Tipos de datos ordenados de mayor a menor de números en punto flotante
+		// double > float
+		
+		// Ojo, siempre que hagamos un cast de un numero en punto flotante a 
+		// un número vamos a perder la parte decimal
+		
+		numeroLargo = 2_147_483_648L;// No entra en un entero por 1
+		// Hay que ser responsbles con los casting, porque
+		// Java va a realizar lo posible para hacer el cast, pero eso
+		// no significa que este bien hecho.
+		numeroEntero = (int) numeroLargo; // Casting
+		// En este caso, Java da la vuelta al número, y empieza
+		// a contar desde los negativos.
+		System.out.println(numeroEntero);
+		
+		numeroEntero = (int) numeroLargo * 2; // Casting
+		System.out.println(numeroEntero); // volvemos al cero
+		
+		// Ejemplo con número doble
+		double numeroDoble = 20.75;
+		// numeroLargo = numeroDoble; // error
+		numeroLargo = (long) numeroDoble; // eliminar la parte decimal
+		System.out.println(numeroLargo);
+		// CUIDADO con estas cosas porque es posible que se pierda infomación
+		numeroDoble = 30.00;
+		numeroLargo = (long) numeroDoble;
+		System.out.println(numeroLargo);
+		
+		// Boolean
+		boolean bool1 = false;
+		// numeroByte = (byte) bool1; // hay veces que no tiene sentido hacer casting
+		
+		// Cadenas
+		String cadenaNumerica = "1";
+		// numeroDoble = (int) cadenaNumerica; // Tampoco se puede hacer esto
+		// cadenaNumerica = (String) numeroEntero; // Tampoco se puede hacer esto
+
+	}
+
+}
+
+/*
+ * Los objetivos de las funciones:
+ * 1. Reutilizar código
+ * 2. Ordenar código
+ * 
+ * Tienen parámetros de entrada o de salida.
+ * 
+ * ======================
+ * =   FUNCIONAMIENTO   =
+ * ======================
+ * 
+ * 1. Los métodos se declaran DENTRO de la clase.
+ * 2. NO se declaran dentro del método "main". --> No se pueden declarar métodos dentro de métodos.
+ * 3. Los métodos tienen que tener nombre.
+ * 4. Java es compilado --> podemos declarar un método donde queramos dentro de la clase:
+ *    No importa que al principio se llame a un método que se está declarando al final de la clase.
+ *    Al compilar el método "se va a crear" y se puede usar en cualquier lugar.
+ * 
+ *    En un lenguaje NO compilado (como Python) debe declararse el método o la función antes de
+ *    utilizarse.
+ * 
+ * Después del método "main" se van a declarar los distintos métodos. 
+ * Recuerda, se utilizan llaves para abrir y cerrar el alcance del método "main".
+ * 
+ *     public static void main(String[] args) {
+ *         // bloque de código
+ *     } --> llave de cierre
+ * 
+ * Baja y sigue profundizando.
+ */
+
+ public class _0030_Metodos { // ======DECLARACION DE LA CLASE======
+
+	// Ignora esta variable hasta el último método metodoConUnaVariable()
+	static String variableGlobal = "Soy global y se me puede usar en toda la clase";
+
+    // ======METODO MAIN======
+
+    public static void main(String[] args) {
+		/*
+		 * Imagina que esto es una tarea que necesita varias líneas de código para funcionar.
+		 * Necesito realizar esta tarea en diferentes momentos, o simplemente quiero un código más limpio,
+		 * ordenado y fácil de mantener.
+		 */
+
+		System.out.println("=====================================================");
+        System.out.println("=   Bienvenidos a las funciones o métodos en Java   =");
+		System.out.println("=====================================================");
+		System.out.println("Gamma Tech School & Randstad");
+        System.out.println("Autor: Alex Bometon");
+		System.out.println();
+
+		// Fuera del método "main" voy a declarar un método con el nombre "bienvenida".
+		// bienvenida() hará esta tarea que ocupa 5 líneas.
+		System.out.println("Después de esto voy a ejecutar el método 'bienvenida()'");
+		bienvenida(); // --> realizo la tarea en una única linea.
+
+		// Debajo de la declaración del método "bienvenida()" declaro el método "nombreDelAutor()"
+		// Ese método devuelve una cadena de texto, pero no tiene ninguna instrucción
+		// que haga que se muestre por pantalla...
+		System.out.println("Llamando al método 'nombreDelAutor()'...");
+		nombreDelAutor(); // Esto me da --> "Alex Bometon" pero por sí solo no es nada... no digo que se muestre por consola
+		
+
+		// Necesito que se vea por consola:
+		// Puedo cuardarlo en una variable o hacer un print para que lo muestre directamente.
+		String cadenaDelMetodo = nombreDelAutor(); // esto guarda el retorno del método
+												   // en este caso es "Alex Bometon"
+		System.out.println("Llamo directamente al método: " + nombreDelAutor());
+		System.out.println("Llamo a la variable cadenaDelMetodo: " + cadenaDelMetodo);
+		System.out.println();
+
+		// ======Método con parámetros======
+		// Voy a crear, al final, después de la declaración de nombreDelAutor() otro método imprimirNombre()
+		// Este método tendrá un parámetro, al que en el momento de llamarlo le tendré que dar un argumento
+		System.out.println("El nombre que sale a continuación es un argumento del método imprimirNombre()");
+		imprimirNombre("Sonia Frias"); // Mostrará por pantalla el nombre
+		// También se puede dar como argumento una variable, siempre que sea String (en este caso)
+		imprimirNombre(cadenaDelMetodo);
+		imprimirNombre(nombreDelAutor());
+		System.out.println();
+		System.out.println("Ahora el método es imprimirNombreApellido() y tiene dos parámetros");
+		imprimirNombreApellido("Sonia", "Frias");
+		imprimirNombreApellido("Bometon", "Alex"); // Todo lo hace en el orden que se le indica
+		System.out.println();
+		System.out.println("Entendiendo el alcance y la vida de las variables...");
+		// Vamos a intentar que nos muestre la variableMetodo
+		// System.out.println(variableMetodo); // --> ni siquiera la encuentra, porque fuera del método no existe.
+		metodoConUnaVariable(); // Llamando al método sí lo muestra...
+		System.out.println();
+		System.out.println("Voy a intentar imprimir variableGlobal desde main: " 
+							+ variableGlobal);
+		System.out.println("Voy a volver a llamar a metodoConUnaVariable() a ver si también puede imprimirla...");
+		metodoConUnaVariable();
+    } // cierra método main
+
+    /*
+     * ==========================================================
+     * =   DECLARANDO TODOS LOS METODOS QUE SE VAN A UTILIZAR   =
+     * ==========================================================
+     */
+
+	// ======bienvenida======
+
+    // Método bienvenida() --> no va a devolver ningún tipo de dato, va a hacer los prints
+	// Recuerda: antes del nombre hay que indicar la clase del tipo de dato que nos va a devolver.
+	//           void --> si no va a devolver nada
+
+	public static void bienvenida() { // llave que abre
+		// bienvenida() --> no tiene nada dentro del paréntesis, no necesita ningún parámetro para funcionar
+		System.out.println("=====================================================");
+        System.out.println("=   Bienvenidos a las funciones o métodos en Java   =");
+		System.out.println("=====================================================");
+		System.out.println("Gamma Tech School & Randstad");
+        System.out.println("Autor: Alex Bometon");
+		System.out.println();
+	} // llave que cierra
+
+	/*
+	 * ======Nombre del Autor======
+	 * Este método va a devolver un nombre, en una cadena de texto (String).
+	 * Para que eso sea así en su declaración donde antes había void ahora debe haber String.
+	 *     - String o el tipo/clase que sea lo que vaya a devolver.
+	 * 
+	 * Recuerda: para que devuelva información de algún tipo/clase se necesita la palabra reservada return.
+	 * ==> return --> puede haber tantos como sea necesarios (quizá debe devolver una cosa u otra en base a una condición)
+	 * 			  --> va a finalizar la ejecución del método y devolverá la información que se indique en esa línea de código.
+	 */
+
+	public static String nombreDelAutor() {
+		String nombre = "Alex Bometon";
+		return nombre;
+		// Se puede hacer directamente esto y sería lo mismo:
+		// return "Alex Bometon";
+	} // llave que cierra nombreDelAutor
+
+	/*
+	 * ======Imprimir Nombre======
+	 * Como su nombre indica lo que va a hacer es imprimir un nombre.
+	 * Va a tener un parámetro "nombre" que será de la clase String.
+	 * No va a devolver nada, su tarea es que salga por consola el nombre.
+	 * Cuando a un parámetro le damos un valor eso es su argumento.
+	 */
+
+	public static void imprimirNombre(String nombre) { // Se pueden poner tantos como sean necesarios, separados por coma
+		System.out.println("Nombre: " + nombre);
+	} // llave que cierra imprimirNombre
+
+	// Ahora este método va a tener más de un parámetro
+	// Le tendré que dar tantos argumentos como parámetros tenga
+	public static void imprimirNombreApellido(String nombre, String apellido) {
+		// Dentro de este método no se va a poder declarar ninguna variable con el nombre de los parámetros
+		// Los parámetros son como si fueran variables dentro de la función
+		// RECUERDA: NO puedes declarar dos variables con el mismo nombre 
+		System.out.println("Nombre completo: " + nombre + " " + apellido);
+	} // llave que cierra imprimirNombreApellido
+
+	/*
+	 * ============================
+	 * =   VIDA DE UNA VARIABLE   =
+	 * ============================
+	 * 
+	 * Una variable puede ser llamada dentro de su bloque de código.
+	 * 
+	 * public class <> {
+	 *     <> variableGlobal;
+	 *     public static void main(String[] args) {
+	 *         System.out.println(variableGlobal); // puedo imprimirla sin problema
+	 * 		   System.out.println(variableLocal); // no va a funcionar, solamente puede ser llamada en la declaración del metodo
+	 *         metodo(); // mostrará en consola el valor de variableGlobal.
+	 * 					 // variableGlobal puede utilizarse desde que abre la llave de la clase hasta que se cierra
+	 *					 // todo el código comprendido entre esas llaves puede usarla
+	 *     }
+	 *     
+	 *     public static void metodo() {
+	 *         <> variableLocal; // Esta variable únicamente tiene vida aquí dentro
+	 * 		   System.out.println(variableGlobal);
+	 *     }
+	 * }
+	 */
+
+	public static void metodoConUnaVariable() {
+		String variableMetodo = "Solo puedo ser usada entre las llaves ({}) que de definen el método.";
+		System.out.println(variableMetodo);
+		// Antes del método main está la variableGlobal
+		System.out.println("No sé si puedo imprimir la variableGlobal: " + variableGlobal);
+		System.out.println("Resulta que sí pero utilizando la palabra reservada static...");
+	}
+}
+/*
+ * ===============================
+ * =   ESTRUCTURA DE UN METODO   =
+ * ===============================
+ * Repaso:
+ * === 1 === VISIBILIDAD
+ * === 2 === TIPO
+ * === 3 === RETORNO
+ * === 4 === NOMBRE --> firma
+ * === 5 === PARAMETROS --> firma
+ * === 6 === LLAVES { }
+ * 
+ * public/privado static void/... nombreMetodo(parametros si se necesitan) {
+ *     codigo con sus tareas
+ * }
+ * 
+ * =======================
+ * =   FIRMA DE METODO   =
+ * =======================
+ * La firma sirve para identificar concretamente cada función
+ * Forman parte de la firma el NOMBRE y los PARAMETROS
+ * 
+ * ==================
+ * =   SOBRECARGA   =
+ * ==================
+ * Más de un método con el mismo nombre pero diferente firma:
+ *    - Cambia el tipo de los parámetros de entrada.
+ *    - Cambia el número de parámetros de entrada
+ * 
+ * System.out.prinln() es un ejemplo. 
+ */
+
+ public class _0031_MetodosSobrecarga { // ======DECLARACION DE LA CLASE======
+	// constante para usar de separador
+	public static final String SEPARADOR = "----------------------------";
+
+	public static void main(String[] args) { // ===INICIO METODO MAIN===
+		imprimirLong(34);
+		System.out.println();
+		imprimirSuma(45, 55);
+		System.out.println();
+		// imprimirLong("pepe");
+		imprimirCadena("pepe");
+			/*
+			 * public static void imprimirCadena(String s1) {
+			 * 	   System.out.println(SEPARADOR);
+			 * 	   System.out.println("Salida imprimirCadena: " + s1);
+			 * 	   System.out.println(SEPARADOR);
+			 * }
+			 */
+		System.out.println();
+		imprimirCadena("maria", "luisa");
+			/*
+			 * public static void imprimirCadena(String s1, String s2) {
+			 * 	   System.out.println(SEPARADOR);
+			 * 	   System.out.println("Salida 1: " + s1);
+			 * 	   System.out.println("Salida 2: " + s2);
+			 * 	   System.out.println(SEPARADOR);
+			 * }
+			 */
+
+		imprimirCadena("un argumento");
+		imprimirCadena("primer argumento", "segundo argumento");
+		imprimirCadena("primer argumento", 23.45);
+
+		System.out.println();
+		imprimirCadena("Manolo", 34);
+		System.out.println();
+		
+		// Gracias a la sobrecarga puedo usar la función imprimir
+		// y dependiendo del parámetro de entrada, se invocará
+		// una función u otra
+		imprimir(34.56);
+		imprimir(100L);
+		imprimir("Texto");
+		
+		System.out.println("Fin de programa");
+	} // LLAVE DE CIERRE METODO MAIN
+	
+	private static void imprimirLong(long n1) {
+		System.out.println(SEPARADOR);
+		System.out.println("Salida imprimirLong: " + n1);
+		System.out.println(SEPARADOR);
+	}
+	
+	// Podemos invocar a funciones dentro de otras funciones y suele ser muy habitual
+	private static void imprimirSuma(int n1, int n2) {
+		long resultado = n1 + n2;
+		System.out.println("Salida imprimirSuma (llama internamente a imprimirLong):");
+		imprimirLong(resultado);
+	}
+	
+	private static void imprimirCadena(String s1) {
+		System.out.println(SEPARADOR);
+		System.out.println("Salida imprimirCadena: " + s1);
+		System.out.println(SEPARADOR);
+	}
+	
+	// La siguiente función daria error, porque tiene la MISMA FIRMA que la
+	// función de arriba. Para Java ambas funciones son iguales
+	/*
+		private static void imprimirCadena(String s1) {
+			System.out.println("----------------------------");
+		}
+	*/
+	//La función de arriba no daría error si cambiamos el nombre
+	
+	// Creamos otra función que se llame igual, PERO cambiamos el número
+	// de parámetros de entrada. Por lo tanto, la firma es diferente:
+	private static void imprimirCadena(String s1, String s2) {
+		System.out.println(SEPARADOR);
+		System.out.println("Salida imprimirCadena dos parámetros:");
+		System.out.println("Salida 1: " + s1);
+		System.out.println("Salida 2: " + s2);
+		System.out.println(SEPARADOR);
+	}
+	
+	// Ahora cambiamos la firma de la función, variando el TIPO de parámetros
+	// de entrada:
+	private static void imprimirCadena(String s1,double d2) {
+		System.out.println(SEPARADOR);
+		System.out.println("Salida imprimirCadena dos parámetros:");
+		System.out.println("Salida 1: " + s1);
+		System.out.println("Salida 1: " + d2);
+		System.out.println(SEPARADOR);
+	}
+	
+	// Vamos a sobrecargar la función imprimir(), para hacerla genérica
+	private static void imprimir(long valor) {
+		System.out.println("-------- long --------------");
+		System.out.println("salida: " + valor);
+		System.out.println("----------------------------");
+	}
+	
+	private static void imprimir(String valor) {
+		System.out.println("------- String -------------");
+		System.out.println("salida: " + valor);
+		System.out.println("----------------------------");
+	}
+	
+	private static void imprimir(double valor) {
+		System.out.println("------- double -------------");
+		System.out.println("salida: " + valor);
+		System.out.println("----------------------------");
+	}
+	
+	// La siguiente función daría error en tiempo de compilación porque
+	// tiene la misma firma que el método de arriba. El parámetro de
+	// salida NO pertenece a la firma de un método, por lo tanto
+	// Java no tiene manera de distinguirlos:
+	/*
+		private static String imprimir(double valor) {
+			System.out.println("------- double -------------");
+			System.out.println("salida: " + valor);
+			System.out.println("----------------------------");
+			return "Valor * valor es: " + valor * valor;
+		}
+	*/
+} // === LLAVE DE CIERRE DE CLASE
+public class _0040_Operadores {
+	public static void main(String[] args) {
+		/*
+		 * ==================
+		 * =   OPERADORES   =
+		 * ==================
+		 * Los operadores son símbolos especiales que por lo común se 
+		 * utilizan en expresiones.
+		 * 
+		 * Según su naturaleza pueden representar multiples objetivos.
+		 * 
+		 * ======EXPRESION======
+		 * Una expresión es una combinación de variables, operadores 
+		 * o llamadas a métodos.
+		 * 
+		 * El tipo de dato del valor regresado por una expresión depende 
+		 * de los elementos usados en la expresión.
+		 */
+		
+		// ======OPERADORES ARITMETICOS======
+		System.out.println("ARITMETICOS");
+		System.out.println("Suma: +");
+		System.out.println(5 + 7); // '+' suma
+		System.out.println("Resta: -");
+		System.out.println(17 - 7);// '-' resta
+		System.out.println("Multiplicación: *");
+		System.out.println(5 * 7); // '*' multiplicación
+		System.out.println("División: /");
+		System.out.println(10 / 2);// '/' división
+		
+		// Si dividimos dos numeros enteros, el resultado sera
+		// un número entero, es decir, se elimina la parte decimal
+		System.out.println("Cuidado con los decimales al hacer 11/2:");
+		System.out.println(11 / 2); // 5 --> Tendría que dar 5.5
+		
+		// Si en la división usamos algún numero double, entonces
+		// el resultado sera un numero decimal o double.
+		System.out.println("Con un número decimal y otro entero gana el decimal:");
+		System.out.println(11.0 / 2);//5.5
+		System.out.println(11 / 2.0);//5.5
+		
+		// '%' modulo de la división, es decir, el resto de la división
+		// entera.
+		// Útil para controlar si un número es divisible por otro,
+		// si es par o impar...
+		System.out.println("Módulo: %");
+		System.out.println(10 % 2); // 0
+		System.out.println(11 % 2); // 1
+		System.out.println(12 % 2); // 0
+
+		System.out.println();
+		
+		// ======OPERADORES DE ASIGNACION======
+		// '=', se utiliza para asignar valores a variables
+		System.out.println("ASIGNACION");
+		int numero1 = 5;
+		numero1 = 10; // reasignación porque la variable ya existe y le estoy asignando un nuevo valor
+		
+		// Podemos usar operadores aritmeticos para cambiar el valor
+		// de variables
+		int numero2 = 10;
+		System.out.println("= sirve para asignar valores: ");
+		System.out.println(numero2); // 10 
+		// En la siguiente expresión estamos asignando un nuevo valor
+		// a la variable 'numero2'. Estamos cogiendo el antiguo valor
+		// de la variable 'numero2' (10) y le estamos sumando el valor
+		// '5', es decir, cuando ejecutemos la expresión el nuevo valor
+		// que tendrá la variable 'numero2' será '15'
+		numero2 = numero2 + 5; // 10 + 5 = 15
+		System.out.println("variable = variable + número:");
+		System.out.println(numero2); // 15
+		
+		// '+=', se utiliza para incrementar un valor a una variable
+		// de manera más rápida de escribir
+		int numero3 = 10;
+		System.out.println("Es lo mismo que: variable += número");
+		numero3 += 5; // Esto es equivalente a 'numero3 = numero3 + 5;'
+		System.out.println(numero3); // 15
+		
+		// '-=', se utiliza para decrementar una valor a una variable
+		// de una manera más rapida de escribir
+		int numero4 = 10;
+		System.out.println("En el caso de resta: -=");
+		numero4 -= 4; // Esto es equivalente a 'numero4 = numero4 - 4;'
+		System.out.println(numero4); // 6
+		
+		// '*=', igual pero para la multiplicación
+		int numero5 = 10;
+		System.out.println("En el caso de multiplicación: *=");
+		System.out.println(numero5); // 10
+		numero5 *= 5; // Esto es equivalente a 'numero5 = numero5 * 5;'
+		System.out.println(numero5); // 50
+		
+		// '/=', igual pero para la división
+		int numero6 = 10;
+		System.out.println("En el caso de división: /=");
+		numero6 /= 5; // Esto es equivalente a 'numero6 = numero6 / 5;'
+		System.out.println(numero6);
+		
+		// '%=', igual pero para el módulo
+		int numero7 = 10;
+		System.out.println("En el caso de módulo: %=");
+		numero7 %= 5; // Esto es equivalente a 'numero7 = numero7 % 5;'
+		System.out.println(numero7); // 0
+		
+		System.out.println();
+
+		// ======INCREMENTO======
+		System.out.println("INCREMENTO");
+		// Operador especial de incremento en UNA unidad
+		// El operador '++' incrementa la variable entera en uno!
+		int variableIncremental = 0;
+		System.out.println("Valor inicial de la variable: " + variableIncremental);
+		variableIncremental++; // Equivalente a 'variableIncremental = variableIncremental + 1;'
+		// También equivalente a 'variableIncremental += 1;
+		System.out.println("Valor después de un ++: " + variableIncremental); // 1
+		variableIncremental++;
+		System.out.println("Valor después de otro ++: " + variableIncremental); // 2
+		
+		// ======DECREMENTO======
+		System.out.println("DECREMENTO");
+		// Operador especial de decremento en UNA unidad
+		// El operador especial '--' decrementa la variable entera en uno!
+		int variableDecremental = 0;
+		System.out.println("Valor inicial de la variable: " + variableDecremental);
+		variableDecremental--; // Equivalente a 'variableDecrementa = variableDecremental - 1;'
+		System.out.println("Valor después de un --: " + variableDecremental); // -1
+		variableDecremental--;
+		System.out.println("Valor después de otro --: " + variableDecremental); // -2
+		
+		//Ojo! con la precediencia de operadores
+		int numero8 = 0;
+		System.out.println("El orden importa. Valor inicial: " +numero8);
+		//Si ponemos el '++' al final, se incrementará el valor despues
+		//de imprimirlo por pantalla
+		System.out.println("Aplicando variable++...");
+		System.out.println(numero8++);//Imprimirá 0, pero luego incrementará el valor en 1
+		//En este punto la variable 'numero8' valdrá 1
+		System.out.println(numero8);//Imprimirá 1
+		
+		//Ojo! otra vez :)
+		//Si ponemos el '++' al principio, se incrementará primero
+		int numero9 = 0; // El valor sera 0
+		System.out.println("Valor inicial: " + numero9);
+		System.out.println("Aplicando ++variable:");
+		System.out.println(++numero9);//Imprimirá 1, y su valor será 1
+		System.out.println("Ahora vairable++");
+		System.out.println(numero9++);//Imprimirá 1, y su valor sera 2
+		System.out.println(numero9);//Valor sera 2
+
+		System.out.println();
+		
+		// ======OPERADORES RELACIONALES======
+		// Son operadores que comparan valores y devuelven siempre un valor booleano
+		// Operador '==', compara si dos valores son iguales
+		System.err.println("Operador =");
+		System.out.println("5 == 5: " + (5 == 5));
+		System.out.println("5 == 7: " + (5 == 7));
+		// Normalmente este operador no se utiliza con literales, se utiliza con variables
+		int numero10 = 5;
+		int numero11 = 8;
+		System.out.println(numero10 == numero11);
+		numero10 = 8;
+		System.out.println(numero10 == numero11);
+		
+		// Operador '<', compara si un valor es menor que otro
+		System.out.println("Operador <");
+		System.out.println("5 < 5: " + (5 < 5)); // false
+		System.out.println("5 < 4: " + (5 < 4)); // false
+		System.out.println("5 < 7: " + (5 < 7)); // true
+		System.out.println("8 < 8: " + (numero10 < numero11)); // false
+		
+		// Operador '>', compara si un valor es mayor que otro
+		System.out.println("Operador >");
+		System.out.println("5 > 5: " + (5 > 5));
+		System.out.println("5 > 4: " + (5 > 4));
+		
+		// Operador '>=', compara si un valor es mayor o igual que otro
+		System.out.println("Operador >=");
+		System.out.println("5 >= 5: " + (5 >= 5)); // true
+		System.out.println("5 >= 4: " + (5 >= 4)); // true
+		System.out.println("3 >= 6: " + (3 >= 6)); // false
+
+		// Operador '<=', compara si un valor es menor o igual que otro
+		System.out.println("Operador <=");
+		System.out.println("5 >= 5: " + (5 <= 5));
+		System.out.println("5 >= 4: " + (5 <= 4));
+		System.out.println("3 >= 6: " + (3 <= 6));
+		
+		// Operador '!=', compara si un valor es distinto de otro
+		System.out.println("Operador !=");
+		System.out.println("5 != 4: " + (5 != 4)); // true
+		System.out.println("8 != 8: " + (numero10 != numero11)); // false
+		
+		// Podemos utilizar generalmente otros tipos de datos
+		System.out.println(false == false); // true
+		System.out.println(true != false); // true
+		System.out.println(34.56 <= 34.57); // true
+		// A veces, que no siempre, podemos comparar entre diferentes tipos
+		System.out.println(456L < 234.56); // false
+		//System.out.println(false < 10); // Error
+		
+		//Operador especial de agrupación, '()'
+		//Hay que tener claro que los operadores tienen precedencia para 
+		//ejecutarse, el '*' tiene precedencia al '+'
+		System.out.println(10 + 2 * 5); // 20 --> la multiplicación tiene preferencia
+		System.out.println((10 + 2) * 5); // 60 --> () tienen preferencia
+
+		System.out.println();
+		
+		// ======OPERADORES LOGICOS======
+		// Los operadores lógicos se usan para combinar dos valores Booleanos 
+		// y devolver un resultado Booleano, es decir, verdadero o falso
+		
+		// Operador lógico "AND", se representa por los simbolos '&&'
+		// Este operador devuelve TRUE solamente cuando los dos valores booleanos
+		// que se comparan son TRUE
+		// Tabla "AND"
+		// 1- false y false = false
+		// 2- false y true = false
+		// 3- true y false = flase
+		// 4- true y true = true
+		System.out.println("Operador &&");
+		System.out.println(true && false); // false
+		boolean bool1 = true;
+		boolean bool2 = true;
+		System.out.println(bool1 && bool2); // true
+		
+		// Operador lógico "OR", se representa por los simbolos '||'.
+		// El simbolo '|' se suele llamar "pipe".
+		// Este simbolo se escribe pulsando "altGr + 1" (option + 1, en mac)
+		// Este operador devuelve TRUE cuando alguno de los dos valores booleanos
+		// que se comparan sea TRUE
+		// Tabla "OR"
+		// 1- false y false = false
+		// 2- false y true = true
+		// 3- true y false = true
+		// 4- true y true = true
+		System.out.println("Operador ||");
+		System.out.println(true || false); // true
+		System.out.println(bool1 || bool2); // true
+		bool1 = false;
+		System.out.println(bool1 || bool2); // true
+		bool2 = false;
+		System.out.println(bool1 || bool2); // false
+		
+		// Operador logico negación, se representa con el simbolo "!"
+		// Este operador devuelve TRUE cuando el valor es FALSE y devuelve
+		// FALSE cuando el valor es TRUE, es decir, cambia el valor booleano
+		System.out.println("Operador !");
+		System.out.println(!true);//false
+		System.out.println(!false);//true
+		System.out.println(!bool1);//true
+		
+		//Ejemplos
+		//Si tenemos muchas condiciones booleanas es mejor usar 
+		//el operador de agrupación
+		System.out.println((true && false) || true);//true
+		System.out.println(!bool1 || bool2);//true
+		
+		// Operador especial de concatenación de cadenas, se representa por 
+		// el simbolo '+'. Nótese que es el mismo operador que para la
+		// suma aritmética.
+		System.out.println("Cadena " + "concatenada");
+		// Tambien se puede utilizar para concatenar una cadena con otra
+		// variable de otro tipo
+		int numero12 = 5;
+		int numero13 = 7;
+		int resultado = numero12 + numero13;
+		System.out.println("El resultado de la operacion es : " + resultado);
+		numero13 = 12;
+		resultado = numero12 + numero13;
+		System.out.println("El resultado de la operacion es : " + resultado);
+
+		System.out.println();
+
+	}
+
+}
+import java.util.Scanner;
+
+public class _0050_CondicionalesIf {
+	public static void main(String[] args) {		
+		boolean cierto = true;
+		if(cierto) // Como la variable 'cierto' es TRUE, entramos dentro del condicional
+			System.out.println("La variable tiene valor TRUE");
+		
+
+		cierto = false;
+		if(cierto) // Como la variable 'cierto' es FALSE, NO entramos dentro del condicional
+			System.out.println("La variable tiene valor FALSE (esto no se imprime, ulio)");
+		
+		// Puedo jugar con operadores para alterar la expresión boolean
+		if(!cierto)
+			System.out.println("La variable tiene valor FALSE, pero está negada.");
+		
+		int numero = 7;
+		if(numero > 5)
+			System.out.println("La variable 'numero' es mayor que 5");
+		
+		numero = 4;
+		if(numero > 5) {
+			System.out.println("La variable 'numero' es mayor que 5");
+		}
+		
+		// Si queremos que la condicion afecta a más de una línea, debemos
+		// de usar un 'bloque'
+		numero = 6;
+		if(numero > 5) {
+			System.out.println("Hurra!! El numero es mayor que 5");
+			System.out.println("El numero es: " + numero);
+		}
+		// IMPORTANTE: Se considera buena práctica de programación en Java
+		// hacer siempre bloques en los condicionales, ya que facilita la
+		// lectura. Es decir, no importa si haceis una línea o varias, 
+		// siempre en conveniente hacer un bloque
+		
+		// La sentencia 'if' puede contener otra palabra reservada en caso
+		// de que no se cumpla la condición. La palabra es 'else'
+		numero = 3;
+		if(numero > 5) {
+			System.out.println("El número es mayor que 5");
+		}else {
+			System.out.println("El número es menor o igual que 5");
+		}
+		
+		// Normalmente las condiciones se basan en entradas de usuario o parámetros
+		// de entrada
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduzca un número para saber si es mayor, igual o menor 5");
+		numero = sc.nextInt();
+		if(numero > 5) {
+			System.out.println("El número es mayor que 5");
+		}else {
+			System.out.println("El número es menor o igual que 5");
+		}
+		
+		// Existe otra variente del 'if' que nos da la opción de poner más condiciones
+		// a valorar, que es 'else if'. Podemos poner tanto 'else if' como queramos.
+		if(numero > 5) {
+			// Si entra por esta condicion, NO valora el 'else if' y por supuesto
+			// tampoco entraría por el 'else'
+			System.out.println("El número es mayor que 5");
+		} else if (numero < 5) { 
+			// Si no se cumple la condicion del 'if', valora esta otra opción
+			// Si la condición del if se cumple NO se valora esta
+			// otra opción
+			System.out.println("El número es menor que 5");
+		} else if (numero == 5) { // Para comparar valores se usa '=='
+			// Si no cumple el primer 'if' y no cumple el segundo 'else if'
+			// entonces valoramos esta opción
+			System.out.println("El número es igual a 5");
+		}/*else {// El 'else' lo podemos usar si lo necesitamos, pero en 
+				 // este caso no tiene sentido
+			System.out.println("El número es menor o igual que 5");
+		}*/
+		
+
+		// CONDICION HECHO EN CLASE UTILIZANDO ELSE
+		String a = "a";
+		String b = "b";
+		String c = "c";
+		String d = "d";
+
+		System.out.println("Introduce una letra");
+		String letra = sc.next();
+
+		if (a.equals(letra)) {
+			System.out.println("Me has escrito una a");
+		} else if (b.equals(letra)) {
+			System.out.println("Me has escrito una b");
+		} else if (c.equals(letra)) {
+			System.out.println("Me has escrito una c");
+		} else if (d.equals(letra)) {
+			System.out.println("Me has escrito una d");
+		} // else {
+		// 	System.out.println("No se admite esta letra.");
+		// }
+
+
+
+
+		// Podemos ver como los bloques 'else if' y 'else' son totalmente
+		// optativos. Además, el bloque 'else if' se puede repetir, mientras
+		// que el bloque 'else' solo puede haber uno (si lo hay).
+		
+		System.out.println("Fin de programa");
+		
+		sc.close();
+
+	}
+}
+public class _0051_CondicionalesAnidacion {
+	public static void main(String[] args) {
+		// Es muy habitual cuando trabajamos con sentencias de control, el ANIDAR
+		// bloques. 
+		// Se llama ANIDAR cuando ponemos sentencias de control, o bucles, métodos...
+		// dentro de otras sentencias de control, bucles, métodos...
+		
+		// Ejemplo
+		
+		int numero1 = 5;
+		int numero2 = 10;
+		if(numero1 == 5) {
+			System.out.println("El número1 es igual a " + numero1);
+			//Puedo anidar para dar funcionalidad
+			//es decir, poner un 'if' dentro de otro 'if'
+			if(numero2 == 10) {
+				System.out.println("El numero2 es igual a" + numero2);
+			}
+		}
+		
+		// Ojo que esto no es totalmente equivalente
+		if(numero1 == 5 && numero2 == 10) {
+			System.out.println("El número1 es igual a " + numero1);
+			System.out.println("El numero2 es igual a" + numero2);
+		}
+		
+		int numero3 = 12;
+		int numero4 = 16;
+		
+		if(numero1 == 5) {
+			System.out.println("El número1 es igual a " + numero1);
+			// Puedo anidar para dar funcionalidad
+			// es decir, poner un 'if' dentro de otro 'if'
+			if(numero2 == 10) {
+				System.out.println("El numero2 es igual a" + numero2);
+				if(numero3 == 12) {
+					System.out.println("El numero3 es igual a" + numero3);
+					if(numero4 == 16) {
+						System.out.println("El numero4 es igual a" + numero4);
+					}
+				}
+			}
+		}
+		
+		// Ejemplo muy complejo de anidación... Normalmente hay que dividirlo
+		// en funciones
+		switch (numero1) {
+		case 5:
+			switch (numero2) {
+			case 10:
+				switch (numero3) {
+				case 13:
+					
+					break;
+
+				default:
+					break;
+				}
+				break;
+
+			default:
+				break;
+			}
+			break;
+		case 4:
+			if(numero4 == 56) {
+				
+			}else {
+				
+			}
+		default:
+			break;
+		}		
+	}
+}
+import java.util.Scanner;
+
+public class _0052_CondicionalesSwitch {
+	public static void main(String[] args) {
+		// La sentencia SWITCH es equivalente a un "IF - ELSE IF - ELSE"
+		// Tiene la siguiente estructura que podemos hacer poniendo
+		// "swi" y pulsando "ctrl" + "espacio" y eligiendo "switch case statement"
+		
+		// Podemos encontrar las siguientes partes
+		// Parte switch, entre parentesis ponemos la variable a valorar
+		int numero = 5;
+		switch (numero) {
+			// Podemos tener de 1 a N "case", que serán cada uno de los valores
+			// que puede tomar la variable del "switch". 
+			case 0:
+				System.out.println("El numero es 0");
+				break; // Esta palabra reservada hace que dejemos de ejecutar la
+					   // sentancia "switch" y no entre por otros "case" o por
+					   // el default
+			case 1:
+				System.out.println("El número es 1, no es 0");
+				break;
+			case 2:
+				System.out.println("El número es 2, no es ni 0 ni 1");
+				break;
+			default: // Si no cumple ninguno de los casos anteriores, entaría
+					 // por la sentencia "default"
+				System.out.println("El número no es ni 0, ni 1, ni 2");
+				// break; // No lo necesita porque es la ultima parte
+		} // aquí cierra switch
+		
+		
+		//Otro ejemplo
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduzca un número del 1-7:");		
+		numero = sc.nextInt();
+		switch (numero) {
+			case 1:
+				System.out.println("El día es LUNES");
+				break;
+			case 2:
+				System.out.println("El día es MARTES");
+				break;
+			case 3:
+				System.out.println("El día es MIERCOLES");
+				break;
+			case 4:
+				System.out.println("El día es JUEVES");
+				break;
+			case 5:
+				System.out.println("El día es VIERNES");
+				break;
+			case 6:
+				System.out.println("El día es SABADO");
+				break;
+			case 7:
+				System.out.println("El día es DOMINGO :(");
+				break;
+			default:
+				System.out.println("El día introducido no corresponde a un día de la semana");
+		}
+		
+
+		// De este modo no necesitamos break, estamos utilizando reglas
+		switch (numero) {
+			case 1 -> System.out.println("El día es LUNES");
+			case 2 -> System.out.println("El día es MARTES");
+			case 3 -> System.out.println("El día es MIERCOLES");
+			case 4 -> System.out.println("El día es JUEVES");
+			case 5 -> System.out.println("El día es VIERNES");
+			case 6 -> System.out.println("El día es SABADO");
+			case 7 -> System.out.println("El día es DOMINGO :(");
+			default -> System.out.println("El día introducido no corresponde a un día de la semana");
+		}
+		
+		// CUIDADO CON NO PONER LOS "break" porque la sentencia se sigue ejecutando
+		// aunque no se cumplan los "case"
+		System.out.println("Introduzca un número del 1-7:");		
+		numero = sc.nextInt();
+		switch (numero) { // si pongo un 5, case lo que hace es:
+						  // 5 == 5 ? --> si es true ENTRA
+			case 1:
+				System.out.println("El día es LUNES");
+			case 2:
+				System.out.println("El día es MARTES");
+			case 3:
+				System.out.println("El día es MIERCOLES");
+			case 4:
+				System.out.println("El día es JUEVES");
+			case 5:
+				System.out.println("El día es VIERNES");
+			case 6:
+				System.out.println("El día es SABADO");
+			case 7:
+				System.out.println("El día es DOMINGO :(");
+			default:
+				System.out.println("El día introducido no corresponde a un día de la semana");
+		}
+		
+		// ¿En qué casos puede ser interesante no poner el "break"?
+		// Normalmente cuando queremos que varios casos se comporten 
+		// de la misma manera.
+		// En este ejemplo vamos a detecar si el número introducido pertence
+		// a un dia "lectivo" o un día de "fin de semana"
+		System.out.println("Introduzca un número del 1-7:");		
+		numero = sc.nextInt();
+		switch (numero) {
+			case 1:
+			case 2:
+			case 3: // aquí entro y sigo ejecutando todo porque no tengo break
+			case 4:
+			case 5:
+				// Podemos poner varias sentencias en el "case" para ejecutar
+				// sin necesidad de crear "bloques"
+				System.out.println("El número introducido es del 1-5");
+				System.out.println("El día es LECTIVO");
+				break;
+			case 6:
+			case 7:
+				System.out.println("El día es FIN DE SEMANA :)");
+				break;
+			default:
+				System.out.println("El día introducido no corresponde a un día de la semana");
+		}
+
+		System.out.println("Introduzca un número del 1-7:");		
+		numero = sc.nextInt();
+		switch (numero) {
+			case 1, 2, 3, 4, 5 -> {
+                            // Podemos poner varias sentencias en el "case" para ejecutar
+                            // sin necesidad de crear "bloques"
+                            System.out.println("El número introducido es del 1-5");
+                            System.out.println("El día es LECTIVO");
+                }
+			case 6, 7 -> System.out.println("El día es FIN DE SEMANA :)");
+            default -> // aquí entro y sigo ejecutando todo porque no tengo break
+                        System.out.println("El día introducido no corresponde a un día de la semana");
+		}
+            // aquí entro y sigo ejecutando todo porque no tengo break
+		
+		System.out.println("Fin del programa");
+		sc.close();
+	}
+}
+public class _0053_OperadorTernario {
+	public static void main(String[] args) {
+		// ======OPERADOR TERNARIO======
+		// Con este operador buscamos hacer una sentancia "IF-ELSE" 
+		// de una manera rápida y en una sola línea
+		
+		// La estructura es la siguiente:
+		// (EXPRESION_BOOLEAN) ? CASO_VERDADERO : CASO_FALSO;
+		// El caso será lo que devuelva la expresión, que normalmente 
+		// lo almacenaremos en una variable
+		
+		// Ejemplo
+		int numero = 6;
+		String cadena = (numero <= 5) ? "Menor o igual que 5" : "Mayor que 5";
+		System.out.println(cadena);
+		
+		//Equivalente al ternario
+		if(numero <= 5) {
+			System.out.println("Menor o igual que 5");
+		}else {
+			System.out.println("Mayor que 5");
+		}
+		
+		// Otro ejemplo
+		String texto = (numero % 2 == 0) ? "El número es par" : "El número es impar";
+		System.out.println(texto);
+		
+		// Otro ejemplo
+		// Las variales booleanas normalmente empiezan por "es" o por "is",
+		// tambien pueden empezar por "tiene" o por "has"
+		boolean esPar = (numero % 2 == 0) ? true : false;
+		// No se recomiendo llamar a las variables "negadas"
+		// Ej: es mejor tomar el nombre "esPar" que llamarla "noEsPar"
+		
+		// El mismo ejemplo anterior pero con sentencia "IF-ELSE"
+		if(esPar) {
+			System.out.println("La variable es par");
+		}else {
+			System.out.println("La variable es impar");
+		}
+		
+		// Si queremos usar la negación mejor usar el operador "!"
+		if(!esPar) {
+			System.out.println("La variable es impar");
+		}else {
+			System.out.println("La variable es par");			
+		}
+	}
+}
+// import de la clase Scanner
+import java.util.Scanner;
+// class creada para el ejemplo
+public class _0060_EjemploInOut {
+    // método main
+    public static void main(String[] args) {
+        // Creación del objeto en una variable
+        Scanner sc = new Scanner(System.in);
+
+        // Output: mensaje que aparecerá en consola
+        System.out.println("Introduce un número entero mayor que 5:");
+        // Input: guardado en una variable para poderlo usar posteriormente
+        int numero = sc.nextInt(); // el usuario escribe y presiona ENTER
+
+        // Comprobación del número introducido
+        if (numero <= 5) { // Si está mal lanzará un error
+            System.err.println("Has introducido: " + numero + ". Número incorrecto.");
+        } else {
+            System.out.println("Número introducido: " + numero);
+        }
+    }
+}
+public class Ejemplos {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 5;
+        
+        // condiciones
+        if (a < b) {
+            System.out.println("A ES MENOR");
+        } else if (a == b) {
+            System.out.println("SON IGUALES");
+            int c = 10;
+            int suma = a + b + c;
+            System.out.println(suma);
+        } else {
+            System.out.println("A ES MAYOR");
+        }
+
+        // otras condiciones
+        if (esPar(a)) {
+            System.out.println("El número " + a + " es par");
+            if (a < b) {
+                System.out.println("A ES MENOR");
+            } else if (a == b) {
+                System.out.println("SON IGUALES");
+            } else {
+                System.out.println("A ES MAYOR");
+            }
+        } else {
+            System.out.println("Como que A no es par, no hago nada");
+        }
+
+        System.out.println("he mirado todas las condiciones");
+        suma += 5; // suma aquí no existe porque solo existe dentro del bloque condicional
+        System.out.println(suma);
+    }
+
+    public static boolean esPar(int numero) {
+        if (numero % 2 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
