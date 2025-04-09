@@ -30,9 +30,9 @@ Aquí encontrarás:
   <details>
     <summary>_01MetodoMain</summary>
 
-    - [x] [EjercicioPrint01](poner la url)  
-    - [x] [EjercicioPrint02](#)  
-    - [x] [EjercicioPrint03](#)  
+    - [x] [EjercicioPrint01](https://github.com/BorjaMerMck/gammatech_school/blob/main/Practicas/Java/GAMMATECH/_Ejercicios/_01MetodoMain/EjercicioPrint01.java)  
+    - [x] [EjercicioPrint02](https://github.com/BorjaMerMck/gammatech_school/blob/main/Practicas/Java/GAMMATECH/_Ejercicios/_01MetodoMain/EjercicioPrint02.java)  
+    - [x] [EjercicioPrint03](https://github.com/BorjaMerMck/gammatech_school/blob/main/Practicas/Java/GAMMATECH/_Ejercicios/_01MetodoMain/EjercicioPrint03.java)  
 
   </details>
 
