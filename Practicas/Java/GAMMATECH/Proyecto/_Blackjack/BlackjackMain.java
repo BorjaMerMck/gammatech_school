@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class BlackjackMain {
     // Variables de clase
-    static String[] deck = new String[52];
-    static int deckIndex = 0;
-    static Scanner scanner = new Scanner(System.in);
+  private  static String[] mazoDeCartas = new String[52];
+  private static int deckIndex = 0;
+  private  static Scanner scanner = new Scanner(System.in);
     
     // Colores para la consola (ANSI)
     static final String RESET = "\u001B[0m";
@@ -22,11 +22,9 @@ public class BlackjackMain {
         System.out.println("=           BLACKJACK           =");
         System.out.println("==================================" + RESET);
         
-        // Inicializar y barajar el mazo
         crearBaraja();
         barajarMazo();
         
-        // Manos de jugador y dealer
         String[] jugador = new String[12];
         String[] dealer = new String[12];
         int jugadorCartas = 0, dealerCartas = 0;
@@ -163,32 +161,32 @@ public class BlackjackMain {
         
         for (String palo : palos) {
             for (String rango : rangos) {
-                deck[index++] = rango + palo;
+                mazoDeCartas[index++] = rango + palo;
             }
         }
     }
     
-    static void barajarMazo() {
+    public static void barajarMazo() {
         Random rand = new Random();
-        for (int i = deck.length - 1; i > 0; i--) {
+        for (int i = mazoDeCartas.length - 1; i > 0; i--) {
             int j = rand.nextInt(i + 1);
-            String temp = deck[i];
-            deck[i] = deck[j];
-            deck[j] = temp;
+            String temp = mazoDeCartas[i];
+            mazoDeCartas[i] = mazoDeCartas[j];
+            mazoDeCartas[j] = temp;
         }
     }
     
-    static String repartirCarta() {
-        if (deckIndex >= deck.length) {
+    public static String repartirCarta() {
+        if (deckIndex >= mazoDeCartas.length) {
             System.out.println("Se ha agotado el mazo. Barajando de nuevo...");
             crearBaraja();
             barajarMazo();
             deckIndex = 0;
         }
-        return deck[deckIndex++];
+        return mazoDeCartas[deckIndex++];
     }
     
-    static int getValorCarta(String carta) {
+    public static int getValorCarta(String carta) {
         String rango = carta.substring(0, carta.length() - 1);
         switch (rango) {
             case "A": return 11;
@@ -197,7 +195,7 @@ public class BlackjackMain {
         }
     }
     
-    static int calcularValorMano(String[] mano, int numCartas) {
+    public static int calcularValorMano(String[] mano, int numCartas) {
         int valor = 0;
         int ases = 0;
         
@@ -214,7 +212,7 @@ public class BlackjackMain {
         return valor;
     }
     
-    static void mostrarMano(String[] mano, int numCartas, boolean mostrarTodas) {
+  public  static void mostrarMano(String[] mano, int numCartas, boolean mostrarTodas) {
         // Borde superior
         for (int i = 0; i < numCartas; i++) {
             if (i == 1 && !mostrarTodas) {
@@ -258,7 +256,7 @@ public class BlackjackMain {
         System.out.println();
     }
     
-    static void mostrarCartasConColor(String[] mano, int numCartas) {
+  public  static void mostrarCartasConColor(String[] mano, int numCartas) {
         // Borde superior
         for (int i = 0; i < numCartas; i++) {
             System.out.print("┌─────┐ ");
