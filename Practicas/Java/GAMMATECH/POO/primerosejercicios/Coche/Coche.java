@@ -107,6 +107,9 @@ public class Coche {
 			 return;
 		}
 		
+		if (this.velocidad >=120) {
+			System.out.println("Recuerde que esta superando el limite de velocidad ");
+		}
 		this.setVelocidad(this.getVelocidad() +5);
 	    System.out.println("Velocidad actual: " + this.getVelocidad());
 	}
@@ -116,6 +119,13 @@ public class Coche {
 			 System.out.println("El coche no está en marcha. No se puede decelerar.");
 			 return;
 		}
+		
+		if (this.velocidad <= 0) {
+			System.out.println("El coche ya está detenido. No puede ir a menos de 0 km/h.");
+			return;
+		}
+		
+		this.setVelocidad(Math.max(0, this.getVelocidad() - 5));
 		this.setVelocidad(this.getVelocidad() -5);
 	    System.out.println("Velocidad actual: " + this.getVelocidad());
 
