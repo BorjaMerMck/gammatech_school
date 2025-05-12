@@ -1,0 +1,9 @@
+INDEX VERSION 1.134+C:\Users\b\Documents\cursos\gammatech_school\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3291136763.index
+1787224517.index
+4276208403.index
+2105728069.index
+400393366.index
+2179537226.index
+3246232287.index
